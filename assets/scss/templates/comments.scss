@@ -1,0 +1,144 @@
+@import "../partials/mixins";
+
+.comments-area{
+	margin-top: 50px;
+
+	ol{
+		@include ul-properties();
+
+		li{
+			padding: 40px;
+			border-bottom: 1px solid #e9eaea;
+
+			@include media-q(s-tablet){
+				> div{
+					display: flex;
+					flex-direction: column;
+					row-gap: 30px;
+				}
+			}
+		}
+
+		ol{
+			margin-left: 5%;
+		}
+	}
+
+	p{
+		margin: 0;
+	}
+
+	.comment-reply-title{
+		a{
+			color: inherit;
+		}
+
+		small{
+    		font-size: 1rem;
+    		text-transform: capitalize;
+    		margin-left: 18px;
+    		display: inline-block;
+		}
+	}
+
+	.container{
+		padding: 0;
+	}
+
+	.comments-wrapper{
+		.avatar{
+			display: inline-block;
+			float: left;
+			margin-right: 20px; 
+
+			img{border-radius: 50%;}
+		}
+
+		.comment-meta{
+			display: flex;
+			justify-content: space-between;
+
+			a.comment-reply-link{
+				@include button-properties;
+				font-size: 1rem;
+				font-weight: $font-weight-light;
+				padding: 10px 18px 7px;
+				min-width: initial;
+			}
+		}
+
+		.comment-block{
+			display: flex;
+			flex-direction: column;
+		}
+
+		p.date{
+    		font-size: 14px;
+    		color: #929496;
+    		font-weight: bold;
+		}
+
+		.comment-text{
+			margin-top: 15px;
+		}
+
+		.comment-form-wrapper{
+			background-color: #f1f1f1;
+			padding: 50px 40px;
+			margin: 60px 0;
+
+			@include media-q(phone){
+				padding: 35px 25px;
+			}
+
+			form{
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 16px;
+
+				label{ display: none; }
+
+				input:not([type="submit"]):not([type="checkbox"]), textarea{
+					width: 100%;
+					@include input-field;
+				}
+
+				input[type="submit"]{
+					@include button-properties;
+					font-family: $font-main;
+					font-weight: $font-weight-x-light;
+					background-color: $c-white; 
+				}
+
+				.comment-notes, .comment-form-comment, .comment-form-cookies-consent, .form-submit, .logged-in-as{
+  					grid-column-start: 1;
+  					grid-column-end: 4;
+				}
+
+				.comment-form-cookies-consent{
+					display: flex;
+
+					input{
+						position: relative;
+						top: 4px;
+    					margin-right: 10px;
+					}
+
+					label{
+						display: inline-block;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@include media-q(s-tablet){
+	.comments-area .comments-wrapper .comment-form-wrapper form{
+		.comment-form-author, .comment-form-email, .comment-form-url{
+  			grid-column-start: 1;
+  			grid-column-end: 4;
+		}
+	}
+}

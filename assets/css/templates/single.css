@@ -1,0 +1,36 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.section-blog > .container {
+  max-width: 1200px; }
+.section-blog .blog-details {
+  font-weight: 500;
+  margin: 40px 0; }
+  .section-blog .blog-details p {
+    font-size: 1rem;
+    margin: 0; }
+  .section-blog .blog-details h2 {
+    margin: 20px 0; }
+  .section-blog .blog-details ul.post-categories {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem; }
+    .section-blog .blog-details ul.post-categories :before {
+      content: ""; }
+    .section-blog .blog-details ul.post-categories a {
+      color: #0c303c; }
+      .section-blog .blog-details ul.post-categories a:hover {
+        color: #00bdc1; }
+.section-blog .blog-content blockquote {
+  border-left: 8px solid #00bdc1;
+  margin-left: 0;
+  padding-left: 40px; }
+
+/*# sourceMappingURL=single.css.map */

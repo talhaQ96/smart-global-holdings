@@ -1,0 +1,116 @@
+@import "../partials/mixins";
+
+.acf-solution-block{
+	@include background-properties();
+	width: 100%;
+    border-radius: 50%;
+    box-shadow: 8px 9px 10px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+	&:after{
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+
+	.content-wrapper{
+		@include flex(center, space-between);
+		flex-direction: column;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		text-align: center;
+		color: $c-white;
+		position: absolute;
+		top: 0; bottom: 0;
+		right: 0; left: 0;
+
+		@include media-q (s-laptop, min){
+			padding-right: 30px;
+			padding-left:  30px;
+		}
+
+		@include media-q (laptop, min){
+			padding-right: 60px;
+			padding-left: 60px;
+		}
+
+		@include media-q(s-laptop){
+			padding-right: 70px;
+			padding-left: 70px;
+		}
+
+		@include media-q(tablet){
+			padding-right: 50px;
+			padding-left: 50px;
+
+			h6{
+				font-size: 1.125rem;
+			}
+		}
+
+		@include media-q(s-tablet){
+			padding-right: 80px;
+			padding-left: 80px;
+		}
+
+		@include media-q(480px){
+			padding-right: 45px;
+			padding-left: 45px;
+		}
+
+		@include media-q(s-phone){
+			padding-right: 30px;
+			padding-left: 30px;
+			padding-top: 0px;
+			padding-bottom: 15px;
+
+			h6{
+				font-size: 1rem;
+			}
+		}
+
+
+		img{
+			max-width: 200px;
+
+			@include media-q(s-phone){
+				max-width: 160px;
+			}
+		}
+	
+		p{
+			font-size: map-get($font-size-map, sm);
+			line-height: 1.25rem;
+
+			@include media-q(s-phone){
+				font-size: map-get($font-size-map, xs);
+				line-height: 1.125rem;
+			}
+	
+			span{
+				color: #3fcafa;
+			}
+		}
+	
+		a{
+			color: $c-white;
+			font-size: map-get($font-size-map, xs);
+			display: inline-block;
+			margin-top: 30px;
+			position: relative;
+	
+			&:after{
+				content: "\f0da";
+	    		font-family: "Font Awesome 5 Free";
+	    		font-weight: 600;
+	    		position: absolute;
+	    		right: -12px;
+	    		color: #3fcafa;
+			}
+
+			@include media-q(800px){
+				margin-top: 10px;
+			}
+		}
+	}
+}

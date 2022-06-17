@@ -1,0 +1,55 @@
+@media print {
+	.pagebreak { page-break-before: always; }
+
+	.hide-when-print{
+		display: none !important;
+	}
+
+	#header, #footer, .section-social-accounts, .two-column-layout .wp-block-cover, img{
+		display: none !important;
+	}
+
+	.two-column-layout .inner-content{
+		min-height: initial !important;
+
+		> .wp-block-column{
+			max-width: 100% !important;
+			padding: 0 !important; 		
+		}
+	}
+
+	.acf-card-block{
+		max-width: 100% !important;
+
+		div.thumbnail{
+			display: none !important;
+		}
+	}
+
+	.leadership .wrapper{
+	
+		&:not(:first-child) {
+	    	margin-top: 25px !important;
+		}
+	
+		> div:nth-child(2){
+			display: none !important;
+		}
+	
+		> div:not(.bio){
+			padding-top: 0 !important;
+	
+			> div{
+				position: initial !important;
+			}
+		}
+	
+		.member-info{
+			padding: 20px !important;
+	
+			span.open{
+				display: none !important;
+			}
+		}
+	}
+}

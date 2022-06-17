@@ -1,0 +1,34 @@
+/**
+ * Colors
+ */
+
+$c-white:		       #fff;
+$c-black:		       #000;
+
+$c-brand:              #30a5a7;      
+$c-menu-item:          #1fbec3;
+$c-main:               #0c303c;
+$c-green:              #00bdc1;
+
+/**
+ * Define font related variables here
+ */
+
+$font-main:            'Manrope';
+$font-alt:		       'Gotham';
+
+$font-weight-x-light:   200;
+$font-weight-light:     300;
+$font-weight-normal:    normal;
+$font-weight-medium:    500;
+$font-weight-semi-bold: 600;
+$font-weight-bold:      bold;
+
+$font-size-map: (xs: 12px, sm: 14px, md: 18px, lg: 20px, xl: 22px, xxl: 24px);
+$line-height-map: (xs: 14px, sm: 24px, md: 30px, lg: 40px);
+
+/**
+ * Transition to use
+ */
+ 
+$transition: all 300ms ease-in-out;

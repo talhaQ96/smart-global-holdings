@@ -1,0 +1,5 @@
+.acf-social-accounts ul#social{list-style-type:none;margin:0;padding:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;font-size:30px;margin-top:40px;margin-bottom:40px}
+.acf-social-accounts ul#social li:not(:last-child){margin-right:40px}
+.acf-social-accounts ul#social li::before{display:none}
+.acf-social-accounts ul#social a{color:#29a5a7}
+.acf-social-accounts ul#social a:hover{color:#3fcafa;border-bottom:0}

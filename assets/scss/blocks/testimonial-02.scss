@@ -1,0 +1,123 @@
+@import "../partials/mixins";
+
+.acf-testimonail-block-02{
+	color: #0c303c;
+	display: grid;
+	grid-template-columns: 53% 47%;
+
+	@include media-q(s-laptop, min){
+		margin-left: 80px;
+	}
+
+	@include media-q(s-laptop){
+		grid-template-columns: 1fr;
+	}
+
+	@include media-q(s-tablet, min){
+		@include media-q(s-laptop){
+			.comment-wrap{
+				margin-left: 80px;
+			}
+		}
+	}
+
+	.img-wrap{
+		margin-bottom: -121px;
+
+		@include media-q(s-laptop, min){
+			position: relative;
+			right: -120px;
+		}
+
+		img{
+			display: block;
+			margin: auto;
+
+			@include media-q(s-laptop, min){
+				position: absolute;
+				bottom: 0; left: 0;
+			}
+		}
+	}
+
+	div.comment{
+		position: relative;
+
+		p{
+			font-weight: $font-weight-normal;
+			font-size: 34px;
+			line-height: 64px;
+
+			@include media-q(l-laptop){
+				font-size: 28px;
+				line-height: 48px;
+			}
+
+			@include media-q(s-tablet){
+				font-size: 22px;
+				line-height: 42px;
+				text-align: center;
+			}
+		}
+
+		&:before, &:after{
+			content: "";
+			width: 72px;
+			height: 62px;
+			position: absolute; 
+			z-index: -1;
+			background-repeat: no-repeat;
+
+			@include media-q(l-phone){
+				background-size: 50px;
+			}
+
+			@include media-q(phone){
+				background-size: 35px;
+			}
+		}
+		
+		&:before{
+			background-image: url("../../images/quotation-start.png");
+			left: -80px;
+			top: -55px;
+
+			@include media-q(s-tablet){
+				left: 0;
+			}
+
+			@include media-q(l-phone){
+				top: -40px;
+			}
+		}
+		
+		&:after{
+			background-image: url("../../images/quotation-end.png");
+			right: -70px;
+			bottom: 0px;
+	
+			@include media-q(s-laptop){
+				right: 0;
+	    		bottom: -55px;
+			}
+		}
+	}
+
+	div.author-info p{
+		margin: 0;
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: $font-weight-light;
+
+		@include media-q(l-laptop){
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		@include media-q(s-tablet){
+			font-size: 20px;
+			line-height: 30px;
+			text-align: center;
+		}
+	}
+}

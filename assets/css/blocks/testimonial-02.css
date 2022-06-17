@@ -1,0 +1,99 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.acf-testimonail-block-02 {
+  color: #0c303c;
+  display: grid;
+  grid-template-columns: 53% 47%; }
+  @media (min-width: 1200px) {
+    .acf-testimonail-block-02 {
+      margin-left: 80px; } }
+  @media (max-width: 1199px) {
+    .acf-testimonail-block-02 {
+      grid-template-columns: 1fr; } }
+@media (min-width: 768px) and (max-width: 1199px) {
+  .acf-testimonail-block-02 .comment-wrap {
+    margin-left: 80px; } }
+
+  .acf-testimonail-block-02 .img-wrap {
+    margin-bottom: -121px; }
+    @media (min-width: 1200px) {
+      .acf-testimonail-block-02 .img-wrap {
+        position: relative;
+        right: -120px; } }
+    .acf-testimonail-block-02 .img-wrap img {
+      display: block;
+      margin: auto; }
+      @media (min-width: 1200px) {
+        .acf-testimonail-block-02 .img-wrap img {
+          position: absolute;
+          bottom: 0;
+          left: 0; } }
+  .acf-testimonail-block-02 div.comment {
+    position: relative; }
+    .acf-testimonail-block-02 div.comment p {
+      font-weight: normal;
+      font-size: 34px;
+      line-height: 64px; }
+      @media (max-width: 1365px) {
+        .acf-testimonail-block-02 div.comment p {
+          font-size: 28px;
+          line-height: 48px; } }
+      @media (max-width: 767px) {
+        .acf-testimonail-block-02 div.comment p {
+          font-size: 22px;
+          line-height: 42px;
+          text-align: center; } }
+    .acf-testimonail-block-02 div.comment:before, .acf-testimonail-block-02 div.comment:after {
+      content: "";
+      width: 72px;
+      height: 62px;
+      position: absolute;
+      z-index: -1;
+      background-repeat: no-repeat; }
+      @media (max-width: 575px) {
+        .acf-testimonail-block-02 div.comment:before, .acf-testimonail-block-02 div.comment:after {
+          background-size: 50px; } }
+      @media (max-width: 479px) {
+        .acf-testimonail-block-02 div.comment:before, .acf-testimonail-block-02 div.comment:after {
+          background-size: 35px; } }
+    .acf-testimonail-block-02 div.comment:before {
+      background-image: url("../../images/quotation-start.png");
+      left: -80px;
+      top: -55px; }
+      @media (max-width: 767px) {
+        .acf-testimonail-block-02 div.comment:before {
+          left: 0; } }
+      @media (max-width: 575px) {
+        .acf-testimonail-block-02 div.comment:before {
+          top: -40px; } }
+    .acf-testimonail-block-02 div.comment:after {
+      background-image: url("../../images/quotation-end.png");
+      right: -70px;
+      bottom: 0px; }
+      @media (max-width: 1199px) {
+        .acf-testimonail-block-02 div.comment:after {
+          right: 0;
+          bottom: -55px; } }
+  .acf-testimonail-block-02 div.author-info p {
+    margin: 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 300; }
+    @media (max-width: 1365px) {
+      .acf-testimonail-block-02 div.author-info p {
+        font-size: 24px;
+        line-height: 30px; } }
+    @media (max-width: 767px) {
+      .acf-testimonail-block-02 div.author-info p {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center; } }
+
+/*# sourceMappingURL=testimonial-02.css.map */

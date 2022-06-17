@@ -1,0 +1,80 @@
+@import "../partials/mixins";
+
+.home{
+	.site-content{
+		.wp-block-columns, .wp-block-image, p{
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	}
+
+	// Reusable Block Two Column Layout
+	.two-column-layout{
+		.inner-content > .wp-block-column{
+			max-width: 410px;
+		}
+	}
+
+	// Featured Image Banner
+	.banner{
+		background-position-y: top;
+		min-height: 550px;
+
+		@include media-q(s-laptop, min){
+			padding-top: 240px;
+			height: calc(100vh - 113px);
+			display: block;
+		}
+
+		@include media-q(phone){
+			min-height: 400px
+		}
+
+		.container{
+			position: relative;
+		}
+
+		h1.title{
+			margin: 0;
+
+			@include media-q(s-laptop, min){
+        		position: absolute;
+        		left: 225px; top: 60px;
+			}
+		}
+	}
+
+	// Purpose Section
+	.section-purpose{
+		padding: 30px 0;
+		position: relative;
+
+		@include media-q(tablet, min){
+			&:before{
+				display: none;
+			}
+		}
+
+		.inner-container{
+			max-width: 630px;
+		}
+
+		@include media-q(s-laptop, min){
+			min-height: 610px;
+		}
+
+		@include media-q(s-tablet){
+			img.wp-block-cover__image-background{
+				object-position: 70% 70% !important;
+			}
+		}
+	}
+
+    // RSS Feed Section
+    .section-rss{
+    	
+    	h2{
+    		margin-bottom: 30px;
+    	}
+    }
+}

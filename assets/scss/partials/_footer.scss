@@ -1,0 +1,185 @@
+#footer{
+	background-color: #0f313c;
+	padding: 50px 0 0;
+	font-size: map-get($font-size-map, sm);
+
+
+	@include media-q(s-laptop, min){
+		.container{
+			position: relative;
+			overflow: hidden;
+	
+			&:after{
+				content: "";
+				position: absolute;
+				top: 60px; right: 70px;
+				background-image: url('../images/footer-arrow.svg');
+				background-repeat: no-repeat;
+	    		background-size: contain;
+	    		width: 500px; height: 100%;
+	    		transform: scale(1.2);
+	
+	    		@include media-q(tablet){
+	    			top: 0; right: 0;
+	    			transform: scale(1);
+	    			width: 430px;
+	    		}
+			}
+		}
+	}
+
+	.logo img{
+		max-width: 140px;
+		width: 100%;
+		height: auto;
+	}
+
+	ul{
+		@include ul-properties();
+	}
+
+	.wp-block-columns{
+		margin-bottom: 0;
+	}
+
+	.acf-social-accounts{
+		ul#social{
+			margin: 20px 0 0;
+			font-size: 24px;
+			justify-content: start;
+
+			li:not(:last-child){
+				margin-right: 25px;
+			}
+
+			a{
+				color: #1fbec3;
+
+				&:hover{
+					color: #fff;
+				}
+			}
+		}
+	}
+
+
+	.navigation-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 50px 0;
+		font-weight: $font-weight-semi-bold;
+		position: relative;
+		z-index: 2;
+
+		@include media-q(tablet, min){
+			> nav:not(:last-child){
+				margin-right: 50px;
+			}
+		}
+
+		@include media-q(tablet){
+			flex-direction: column;
+			padding-bottom: 30px;
+
+			> nav:not(:last-child){
+				margin-bottom: 15px;
+			}
+		}
+
+		ul:not(#social){
+
+			li+li{ margin-top: 15px; }
+
+			a{
+				color: $c-menu-item;
+
+				&:hover{
+					color: $c-white;
+				}
+			}
+		}
+
+		label, h2{
+			color: $c-white;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: block;
+			position: relative;
+			margin-bottom: 15px;
+			font-size: 14px;
+			line-height: 14px;
+
+			@include media-q(tablet, min){
+				& + *{
+					height: auto !important;
+					display: block !important;
+				}
+			}
+
+			@include media-q(tablet){
+				& + *{
+					display: none;
+				}
+
+				&:after{
+					content: "\f067";
+    				font-family: "Font Awesome 5 Free";
+    				position: absolute;
+    				right: 0;
+    				line-height: 18px;
+				}
+
+				&.active:after{
+					content: "\f068";
+				}
+			}
+
+		}
+	}
+
+	.bottom{
+		padding-bottom: 15px;
+		position: relative;
+		z-index: 2; 
+
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+			font-size: map-get($font-size-map, xs);
+			line-height: map-get($line-height-map, sm);
+
+			li{
+				position: relative;
+
+				&:not(:last-child){
+					margin-right: 17px;
+
+					&:before{
+						content: "";
+						position: absolute;
+						right: -9px;
+						top: calc(50% - 5px);
+						height: 10px;
+						width: 1px;
+						background-color: $c-white;
+					}
+				}
+
+				a{
+					color: $c-white;
+
+					&:hover{
+						color: $c-menu-item;
+					}
+				}
+			}
+		}
+
+		p{
+			color: $c-white;
+			font-size: 0.688rem;
+			line-height: map-get($line-height-map, sm);
+			margin: 0;
+		}
+	}
+}

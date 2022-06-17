@@ -1,0 +1,118 @@
+@import "../partials/mixins";
+
+.acf-rss-feed{
+	color: $c-green ;
+
+	ul{
+		@include ul-properties();
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 80px 160px;
+
+		@include media-q(desktop){
+			gap: 50px 100px;
+		}
+
+		@include media-q(s-laptop){
+			gap: 50px;
+		}
+
+		@include media-q(tablet){
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media-q(s-tablet){
+			grid-template-columns: 1fr;
+			gap: 30px;
+		}
+
+		li{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 30px;
+			border: 2px solid #30a6a7;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+	}
+
+	a.title{
+		color: #02bbc0;
+	}
+
+	span{
+		color: $c-main;
+		font-size: map-get($font-size-map, sm);
+		line-height: map-get($line-height-map, sm);
+		font-weight: $font-weight-normal;
+
+		&.date{
+			margin-bottom: 15px;
+		}
+
+		&.readmore{
+			a{
+				position: relative;
+				float: right;
+				margin-right: 12px;
+				color: $c-main;
+
+				&:after{
+					content: "+";
+    				position: absolute;
+    				right: -12px;
+    				color: #3fcafa;
+    				font-weight: bold;
+				}
+
+				&:hover{
+					color: #3fcafa;
+
+					&:after{
+						content: "-";
+					}
+				}
+			}
+		}
+	}
+
+	h1{
+		font-size: map-get($font-size-map, md);
+		line-height: map-get($line-height-map, sm);
+		font-weight: $font-weight-bold;
+		font-family: $font-main;
+		text-transform: capitalize;
+	}
+
+	p.view-all-link{
+		text-align: center;
+		margin-top: 40px;
+		font-size: map-get($font-size-map, sm);
+		line-height: map-get($line-height-map, sm);
+
+		a{
+			color: $c-main;
+			position: relative;
+			font-weight: 500;
+			border-color: #3fcafa;
+
+			&:after{
+				content: "+";
+    			font-family: "Font Awesome 5 Free";
+    			font-weight: bold;
+    			position: absolute;
+    			right: -12px;
+    			color: #3fcafa;
+			}
+
+			&:hover{
+				color: #3fcafa;
+
+				&:after{
+					content: "-";
+				}
+			}
+		}
+	}
+}

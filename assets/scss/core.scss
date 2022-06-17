@@ -1,0 +1,463 @@
+@import 'partials/mixins';
+@import "partials/typography";
+@import 'partials/forms';
+@import 'partials/header';
+@import 'partials/footer';
+
+// General Stylings
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+#overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 99;
+    display: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+	text-decoration: none;
+    cursor: pointer;
+    transition: $transition;	
+}
+
+a.button, .button{
+    @include button-properties;
+
+    @include media-q(phone){
+        padding: 10px 23px 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.wp-block-columns.has-background{
+    padding: 0;
+}
+
+.container,
+.wp-block-cover__inner-container{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+// Animations
+
+@media screen{
+    .animate__zoom-in{
+        @include media-q(tablet, min){
+            overflow: hidden;
+        
+            > *{
+                transition: $transition;
+        
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    
+    .animate__pop-up{
+        @include media-q(tablet, min){
+            transition: $transition;
+    
+            &:hover{
+                transform: translateY(-30px);
+            }
+        }
+    }
+    
+    .animate__bottom-to-up {
+        transition: transform 300ms linear;
+        transform: translateY(150px);
+        opacity: 0;
+    }    
+}
+
+// Sections Paddings CSS
+
+.has-padding, .has-padding.has-background{
+   padding-top: 80px;
+   padding-bottom: 40px;
+   margin: 0;
+
+   .wp-block-columns{
+    margin-bottom: 0;
+   }
+
+   @include media-q(s-tablet){
+        padding-top: 60px;
+        padding-bottom: 30px;
+   }
+}
+
+.has-padding-rev, .has-padding-rev.has-background{
+    padding-top: 40px;
+    padding-bottom: 80px;
+    margin: 0;
+
+    .wp-block-columns{
+        margin-bottom: 0;
+    }
+
+   @include media-q(s-tablet){
+        padding-top: 30px;
+        padding-bottom: 60px;
+   }
+}
+
+.has-padding-eq, .has-padding-eq.has-background{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0;
+
+    .wp-block-columns{
+        margin-bottom: 0;
+    }
+
+   @include media-q(s-tablet){
+        padding-top: 60px;
+        padding-bottom: 60px;
+   }
+}
+
+.has-padding-eq-sm, .has-padding-eq-sm.has-background{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+
+    .wp-block-columns{
+        margin-bottom: 0;
+    }
+
+   @include media-q(s-tablet){
+        padding-top: 30px;
+        padding-bottom: 30px;
+   }
+}
+
+// Featured Image Banner CSS
+
+.banner{
+    @include background-properties();
+    min-height: 650px;
+    padding: 120px 0 100px;
+    position: relative;
+
+    .overlay{
+        position: absolute;
+        top: 0; bottom: 0;
+        right: 0; left: 0;
+
+        @include media-q(s-laptop, min){
+            display: none;
+        }
+    }
+
+    .container{
+        position: relative;
+    }
+
+    &.align-center{
+        h1.title{
+            @include media-q(laptop, min){
+                margin-left: 4rem;
+            }
+
+            @include media-q(desktop, min){
+                margin-left: 8rem;
+            }
+        }
+    }
+
+    @include media-q(s-laptop){
+        min-height: 550px;
+        padding: 40px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    @include media-q(tablet){
+        min-height: 400px;
+    }
+
+    @include media-q(s-laptop, min){
+        &.align-top{
+            padding-top: 70px;
+        }
+    
+        &.align-center{
+            display: flex;
+            align-items: center;
+    
+            h1.title{
+                line-height: 100px;
+                margin-top: 35px;
+            }
+        }
+    
+        &.align-top-center{
+            padding-top: 80px;
+    
+            h1.title{
+                max-width: 1024px;
+                margin: auto;
+            }
+        }
+    
+        &.align-center-right{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            
+            .container{
+                max-width: 1240px;
+            }
+    
+            h1.title{
+                float: right;
+            }
+        }
+    
+        &.align-bottom-right{
+            display: flex;
+            align-items: flex-end;
+    
+            .container{
+                max-width: 1366px;
+            }
+    
+            h1.title{
+                float: right;
+            }
+        }
+    }
+
+    h1.title{
+        margin-bottom: 0;
+
+        @include media-q(s-laptop){
+            text-align: center;
+        }
+
+        @include media-q(1570px , min){
+            &.ml-90{
+               margin-left: 90px; 
+            }
+        }
+
+        @include media-q(s-laptop, min){
+            .margin-top{
+                margin-top: 110px;
+            }
+        }
+
+        div{
+            @include media-q(s-laptop, min){
+                display: flex;
+                margin-top: 60px;
+
+                span:first-child{
+                    margin-right: 95px;
+                }
+            }
+
+            @include media-q(s-laptop){
+                br{
+                    display: none;
+                }
+            }
+        }
+
+        span{
+
+            @include media-q(s-tablet, min){
+                display: block;
+            }
+
+            @include media-q(s-laptop){
+                br{
+                    display: none;
+                }
+            }
+
+            &.lowercase{
+                display: block;
+                text-transform: initial;
+                font-size: 2.875rem;
+                line-height: 3.75rem;
+
+                @include media-q(tablet){
+                    font-size:   2.25rem;
+                    line-height: 2.875rem;
+                }
+
+                @include media-q(phone){
+                    font-size: 1.5rem;
+                    line-height: 2.125rem;
+                    font-weight: $font-weight-normal;
+                }
+            }
+
+            &.uppercase{
+                display: block;
+                text-transform: uppercase;
+                font-size: 2.25rem;
+                line-height: 3.125rem;
+
+                @include media-q(s-tablet){
+                    font-size:   1.625rem;
+                    line-height: 2.25rem;
+                }
+
+                @include media-q(phone){
+                    font-size: 1.25rem;
+                    line-height: 1.875rem;
+                }  
+            }
+        }
+    }
+}
+
+// Two Column Layout CSS
+
+.two-column-layout{
+    margin: 0;
+
+    @include media-q(tablet){
+        flex-direction: column;
+
+        &.flipped{
+            flex-direction: column-reverse;
+        }
+    }
+
+    .wp-block-columns{
+        margin-bottom: 0;
+    }
+
+    .wp-block-image,
+    .wp-block-column{
+        margin: 0;
+    }
+
+    .wp-block-cover{
+        height: 100%;
+        padding: 0;
+
+        @include media-q(phone){
+            min-height: 300px;
+        }
+
+        @include media-q(desktop, min){
+            min-height: 660px;
+        }
+    }
+
+    .inner-content{
+        height: 100%;
+        min-height: 300px;
+        align-items: center;
+        padding: 30px;
+
+        @include media-q(phone, min){
+            min-height: 430px;
+        }
+
+        @include media-q(desktop, min){
+            min-height: 660px;
+        }
+
+        > .wp-block-column{
+            margin: 0 auto;
+        }
+    }
+
+    .has-background{
+        img.wp-block-cover__image-background{
+            object-fit: contain;
+        }
+    }
+
+    .four-box-layout{
+        img.wp-block-cover__image-background{
+            object-fit: cover;
+        }
+
+        > .wp-block-columns > .wp-block-column{
+                min-width: 50%;
+
+                @include media-q(599px, max){
+                    flex-basis: auto !important;
+                }
+        }
+
+        .wp-block-cover{
+            min-height: 215px;
+
+            @include media-q(phone){
+                min-height: 150px;
+            }
+
+            @include media-q(desktop, min){
+                min-height: 330px;
+            }
+        }
+    }
+}
+
+// Cards Grid
+
+.cards-grid-container{
+    margin-top: 60px !important;
+    display: flex;
+    justify-content: center;
+
+    > .wp-block-column{
+        margin-left: 0;
+
+        &:not(:last-child){
+            @include media-q(782px, min){
+                margin-right: 20px;
+            }
+
+            @include media-q(s-laptop, min){
+                margin-right: 55px;
+            }           
+        }
+
+        @include media-q(781px, max){
+            @include media-q(600px, min){
+                &:nth-child(odd):not(:last-child){
+                     margin-right: 20px;
+                }
+
+                &:nth-child(n+3){
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        @include media-q(599px, max){
+            &:not(:last-child){
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

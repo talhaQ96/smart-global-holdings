@@ -1,0 +1,16 @@
+/** Colors */
+/** Define font related variables here */
+/** Transition to use */
+.acf-social-accounts ul#social { list-style-type: none; margin: 0; padding: 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; font-size: 30px; margin-top: 40px; margin-bottom: 40px; }
+
+.acf-social-accounts ul#social li:not(:last-child) { margin-right: 40px; }
+
+.acf-social-accounts ul#social li::before { display: none; }
+
+.acf-social-accounts ul#social a { color: #29a5a7; }
+
+.acf-social-accounts ul#social a:hover { color: #3fcafa; border-bottom: 0; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic29jaWFsLWFjY291bnRzLmNzcyIsInNvdXJjZXMiOlsic29jaWFsLWFjY291bnRzLnNjc3MiLCIuLi9wYXJ0aWFscy9fbWl4aW5zLnNjc3MiLCIuLi9wYXJ0aWFscy9fdmFyaWFibGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFFQUEsYUFFRztBQVVILHlDQUVHO0FBZUgsd0JBRUc7QUY3QkgsQUFDQyxvQkFEbUIsQ0FDbkIsRUFBRSxBQUFBLE9BQU8sQ0FBQSxFQ01ULGVBQWUsRUFBRSxJQUFJLEVBQ3JCLE1BQU0sRUFBRSxDQUFDLEVBQ1QsT0FBTyxFQUFFLENBQUMsRUEyQ1YsT0FBTyxFQUFFLElBQUksRUFDYixXQUFXLEVBRmlCLE9BQU8sRUFHbkMsZUFBZSxFRG5EbUIsTUFBTSxFQ29EeEMsU0FBUyxFQUFFLElBQUksRURuRGQsU0FBUyxFQUFFLElBQUksRUFDZixVQUFVLEVBQUUsSUFBSSxFQUNoQixhQUFhLEVBQUUsSUFBSSxHQW9CbkI7O0FBMUJGLEFBU0csb0JBVGlCLENBQ25CLEVBQUUsQUFBQSxPQUFPLENBT1IsRUFBRSxBQUNBLElBQUssQ0FBQSxXQUFXLEVBQUMsRUFDakIsWUFBWSxFQUFFLElBQUksR0FDbEI7O0FBWEosQUFhRyxvQkFiaUIsQ0FDbkIsRUFBRSxBQUFBLE9BQU8sQ0FPUixFQUFFLEFBS0EsUUFBUSxDQUFBLEVBQ1IsT0FBTyxFQUFFLElBQUksR0FDYjs7QUFmSixBQWtCRSxvQkFsQmtCLENBQ25CLEVBQUUsQUFBQSxPQUFPLENBaUJSLENBQUMsQ0FBQSxFQUNBLEtBQUssRUFBRSxPQUFPLEdBTWQ7O0FBekJILEFBcUJHLG9CQXJCaUIsQ0FDbkIsRUFBRSxBQUFBLE9BQU8sQ0FpQlIsQ0FBQyxBQUdDLE1BQU0sQ0FBQSxFQUNOLEtBQUssRUFBRSxPQUFPLEVBQ2QsYUFBYSxFQUFFLENBQUMsR0FDaEIifQ== */
+
+/*# sourceMappingURL=social-accounts.css.map */

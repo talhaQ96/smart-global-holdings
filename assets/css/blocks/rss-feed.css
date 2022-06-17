@@ -1,0 +1,92 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.acf-rss-feed {
+  color: #00bdc1; }
+  .acf-rss-feed ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 160px; }
+    @media (max-width: 1439px) {
+      .acf-rss-feed ul {
+        gap: 50px 100px; } }
+    @media (max-width: 1199px) {
+      .acf-rss-feed ul {
+        gap: 50px; } }
+    @media (max-width: 991px) {
+      .acf-rss-feed ul {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 767px) {
+      .acf-rss-feed ul {
+        grid-template-columns: 1fr;
+        gap: 30px; } }
+    .acf-rss-feed ul li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
+      border: 2px solid #30a6a7;
+      border-radius: 10px;
+      overflow: hidden; }
+  .acf-rss-feed a.title {
+    color: #02bbc0; }
+  .acf-rss-feed span {
+    color: #0c303c;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal; }
+    .acf-rss-feed span.date {
+      margin-bottom: 15px; }
+    .acf-rss-feed span.readmore a {
+      position: relative;
+      float: right;
+      margin-right: 12px;
+      color: #0c303c; }
+      .acf-rss-feed span.readmore a:after {
+        content: "+";
+        position: absolute;
+        right: -12px;
+        color: #3fcafa;
+        font-weight: bold; }
+      .acf-rss-feed span.readmore a:hover {
+        color: #3fcafa; }
+        .acf-rss-feed span.readmore a:hover:after {
+          content: "-"; }
+  .acf-rss-feed h1 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    font-family: "Manrope";
+    text-transform: capitalize; }
+  .acf-rss-feed p.view-all-link {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 24px; }
+    .acf-rss-feed p.view-all-link a {
+      color: #0c303c;
+      position: relative;
+      font-weight: 500;
+      border-color: #3fcafa; }
+      .acf-rss-feed p.view-all-link a:after {
+        content: "+";
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        position: absolute;
+        right: -12px;
+        color: #3fcafa; }
+      .acf-rss-feed p.view-all-link a:hover {
+        color: #3fcafa; }
+        .acf-rss-feed p.view-all-link a:hover:after {
+          content: "-"; }
+
+/*# sourceMappingURL=rss-feed.css.map */

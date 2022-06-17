@@ -1,0 +1,337 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.page .site-content ul, .single .site-content ul {
+  font-size: 20px;
+  line-height: 30px;
+  list-style-type: none; }
+  .page .site-content ul li, .single .site-content ul li {
+    position: relative; }
+    .page .site-content ul li:before, .single .site-content ul li:before {
+      content: "+";
+      color: #00bdc1;
+      position: absolute;
+      left: -30px; }
+    .page .site-content ul li a, .single .site-content ul li a {
+      color: #00bdc1; }
+      .page .site-content ul li a:hover, .single .site-content ul li a:hover {
+        border-bottom: 1px solid #00bdc1; }
+.page .site-content ol, .single .site-content ol {
+  font-size: 20px;
+  line-height: 30px; }
+  .page .site-content ol li a, .single .site-content ol li a {
+    color: #00bdc1; }
+    .page .site-content ol li a:hover, .single .site-content ol li a:hover {
+      border-bottom: 1px solid #00bdc1; }
+.page .site-content figcaption, .single .site-content figcaption {
+  font-weight: normal; }
+
+@media (min-width: 1200px) {
+  .page .banner-between-content {
+    min-height: 650px; } }
+@media (max-width: 479px) {
+  .page .banner-between-content {
+    min-height: 330px; } }
+.page .two-column-layout .inner-content > .wp-block-column {
+  max-width: 530px; }
+.page .has-large-content p {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+  font-weight: 300; }
+  @media (max-width: 767px) {
+    .page .has-large-content p {
+      font-size: 1.25rem;
+      line-height: 2rem; } }
+  .page .has-large-content p:last-child {
+    margin-bottom: 0; }
+.page .img-center img {
+  display: block;
+  margin: auto; }
+.page .section-company-about__operational {
+  padding: 60px 0;
+  margin: 0; }
+  @media (max-width: 575px) {
+    .page .section-company-about__operational {
+      padding: 45px 0; } }
+  .page .section-company-about__operational .container {
+    max-width: 1530px; }
+    @media (max-width: 991px) {
+      .page .section-company-about__operational .container > .wp-block-columns {
+        flex-direction: column; }
+        .page .section-company-about__operational .container > .wp-block-columns .wp-block-column {
+          margin: 0;
+          text-align: center; } }
+  .page .section-company-about__operational .wp-block-columns, .page .section-company-about__operational figure {
+    margin: 0; }
+  .page .section-company-about__operational .text-box {
+    margin-top: 50px; }
+    @media (min-width: 1200px) {
+      .page .section-company-about__operational .text-box {
+        margin-right: 135px; } }
+  .page .section-company-about__operational .chart-wrapper {
+    width: 570px;
+    max-width: 100%; }
+    @media (max-width: 991px) {
+      .page .section-company-about__operational .chart-wrapper {
+        margin: auto; } }
+    @media (max-width: 767px) {
+      .page .section-company-about__operational .chart-wrapper {
+        width: 525px; } }
+    @media (max-width: 575px) {
+      .page .section-company-about__operational .chart-wrapper {
+        display: none; } }
+  @media (min-width: 576px) {
+    .page .section-company-about__operational .doughnut-chart {
+      display: none; } }
+.page .section-company-about__acquisition {
+  padding: 60px 0;
+  position: relative; }
+  @media (min-width: 1200px) {
+    .page .section-company-about__acquisition {
+      padding: 190px 0 100px; } }
+  @media (max-width: 1199px) {
+    .page .section-company-about__acquisition:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: #09A5A9;
+      opacity: 1; } }
+  .page .section-company-about__acquisition .text-box {
+    margin: auto; }
+    @media (min-width: 1200px) {
+      .page .section-company-about__acquisition .text-box {
+        float: right;
+        max-width: 485px; } }
+    .page .section-company-about__acquisition .text-box p {
+      font-weight: 300; }
+    .page .section-company-about__acquisition .text-box ul {
+      margin-bottom: 0px; }
+      .page .section-company-about__acquisition .text-box ul li {
+        font-weight: 300; }
+        .page .section-company-about__acquisition .text-box ul li:before {
+          color: #12323d; }
+        .page .section-company-about__acquisition .text-box ul li + li {
+          margin-top: 15px; }
+.page .section-company-about__map .container {
+  max-width: 1530px; }
+.page .section-company-about__map figure {
+  margin-top: 75px;
+  margin-bottom: 40px; }
+  @media (max-width: 1199px) {
+    .page .section-company-about__map figure {
+      margin-top: 40px;
+      margin-bottom: 0; } }
+.page .section-company-history__timeline {
+  margin: 0;
+  padding: 60px 0 170px; }
+  @media (max-width: 1199px) {
+    .page .section-company-history__timeline {
+      padding-bottom: 100px; } }
+  @media (max-width: 767px) {
+    .page .section-company-history__timeline {
+      padding-bottom: 60px; } }
+  .page .section-company-history__timeline figure {
+    margin: 60px 0 0; }
+.page .section-overview-impact__testimonial {
+  padding: 95px 0;
+  margin: 0; }
+  @media (max-width: 767px) {
+    .page .section-overview-impact__testimonial {
+      padding: 60px 0; } }
+.page .section-overview-impact__report {
+  padding: 30px 0; }
+  @media (max-width: 991px) {
+    .page .section-overview-impact__report {
+      text-align: center; } }
+  @media (min-width: 1200px) {
+    .page .section-overview-impact__report:before {
+      display: none; } }
+  .page .section-overview-impact__report .inner-container {
+    max-width: 620px;
+    margin: auto; }
+  .page .section-overview-impact__report .button {
+    color: #cbcccc;
+    border-color: #cbcccc; }
+    .page .section-overview-impact__report .button:hover {
+      color: #00bdc1;
+      border-color: #00bdc1; }
+.page .section-environment-impact__has-bg {
+  align-items: flex-start;
+  padding: 30px 0; }
+  @media (min-width: 1200px) {
+    .page .section-environment-impact__has-bg {
+      padding: 170px 0 0; } }
+  @media (max-width: 1199px) {
+    .page .section-environment-impact__has-bg {
+      align-items: center;
+      text-align: center; } }
+  .page .section-environment-impact__has-bg h2 {
+    margin: 0;
+    text-transform: initial;
+    font-size: 50px;
+    line-height: 60px; }
+    @media (max-width: 767px) {
+      .page .section-environment-impact__has-bg h2 {
+        font-size: 38px;
+        line-height: 50px; } }
+    @media (max-width: 479px) {
+      .page .section-environment-impact__has-bg h2 {
+        font-size: 32px;
+        line-height: 42px; } }
+    @media (min-width: 768px) {
+      .page .section-environment-impact__has-bg h2 span {
+        display: block; } }
+@media (max-width: 767px) {
+  .page .section-people-impact__pie-charts .wp-block-columns {
+    flex-direction: column; }
+    .page .section-people-impact__pie-charts .wp-block-columns .wp-block-column + .wp-block-column {
+      margin-top: 30px; } }
+.page .block-has-icon p:first-child {
+  margin-top: 0; }
+.page .block-has-icon img {
+  display: block;
+  margin: auto; }
+.page .block-has-icon .wp-block-columns .wp-block-column:nth-child(2) {
+  margin: 0; }
+  @media (min-width: 992px) {
+    .page .block-has-icon .wp-block-columns .wp-block-column:nth-child(2) {
+      margin-left: 1em; } }
+@media (min-width: 992px) {
+  .page .block-has-icon h2 {
+    margin-bottom: 65px; } }
+@media (max-width: 991px) {
+  .page .block-has-icon h2 {
+    text-align: center; }
+  .page .block-has-icon > .container > .wp-block-columns {
+    flex-direction: column; } }
+.page .section-careers__benefits .inner-content .wp-block-column {
+  max-width: 600px; }
+.page .section-careers_jobs {
+  margin-bottom: 0;
+  min-height: 455px;
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  @media (max-width: 767px) {
+    .page .section-careers_jobs {
+      min-height: 350px; } }
+  .page .section-careers_jobs .acf-button-block {
+    display: flex;
+    justify-content: center; }
+  .page .section-careers_jobs .button {
+    background-color: #0D323E;
+    color: #fff;
+    border: none; }
+    .page .section-careers_jobs .button span:after {
+      color: #00E2E2; }
+    .page .section-careers_jobs .button:hover {
+      background-color: #fff;
+      color: #0D323E; }
+.page .section-careers_testiomonial {
+  padding: 70px 0 120px;
+  overflow: hidden; }
+  @media (max-width: 575px) {
+    .page .section-careers_testiomonial {
+      padding-top: 20px; } }
+.page .section-contact__contact-details {
+  padding: 70px 0;
+  margin: 0; }
+  @media (max-width: 767px) {
+    .page .section-contact__contact-details {
+      padding: 60px 0; } }
+  .page .section-contact__contact-details .wp-block-columns:not(:first-child) {
+    margin-top: 80px; }
+    @media (max-width: 767px) {
+      .page .section-contact__contact-details .wp-block-columns:not(:first-child) {
+        margin-top: 60px; } }
+  .page .section-contact__contact-details .wp-block-columns {
+    margin-bottom: 50px; }
+    @media (max-width: 767px) {
+      .page .section-contact__contact-details .wp-block-columns {
+        margin-bottom: 30px; } }
+  .page .section-contact__contact-details .has-icon {
+    display: flex; }
+    @media (max-width: 479px) {
+      .page .section-contact__contact-details .has-icon {
+        flex-direction: column;
+        row-gap: 10px; } }
+    .page .section-contact__contact-details .has-icon figure {
+      margin: 0;
+      min-width: 70px; }
+  .page .section-contact__contact-details h2 {
+    margin-bottom: 0; }
+  .page .section-contact__contact-details p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #737879; }
+  .page .section-contact__contact-details ul {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    color: #737879;
+    margin-top: 0;
+    margin-bottom: 0; }
+    .page .section-contact__contact-details ul li + li {
+      margin-top: 10px; }
+
+.not-found {
+  text-align: center; }
+  .not-found .wrapper {
+    max-width: 576px;
+    margin: auto; }
+  .not-found .button {
+    margin-top: 35px; }
+
+.visitior-questionnaire_wrapper.gform_wrapper.gravity-theme .gform_fields {
+  grid-template-columns: 1fr 0 0 0 0 0 1fr 1fr; }
+
+.row-gap-0 {
+  row-gap: 0; }
+
+.postid-1869 .gv-widget-search {
+  align-items: center;
+  flex-flow: initial;
+  margin-top: 0;
+  margin-bottom: 0; }
+  .postid-1869 .gv-widget-search .gv-widget-search.gv-search-horizontal .gv-search-box {
+    flex: 0 0 17em; }
+  .postid-1869 .gv-widget-search .gv-search-box {
+    min-width: inherit; }
+    .postid-1869 .gv-widget-search .gv-search-box input[name="gv_search"] {
+      padding: 12px;
+      border: 1px solid #0c303c;
+      outline: none;
+      -webkit-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
+      font-size: 16px;
+      line-height: 1;
+      width: 100%; }
+.postid-1869 .gv-table-view {
+  border-collapse: collapse;
+  width: 100%; }
+  .postid-1869 .gv-table-view th, .postid-1869 .gv-table-view td {
+    border: 1px solid #ddd;
+    padding: 5px; }
+  .postid-1869 .gv-table-view tr:nth-child(even) {
+    background-color: #f2f2f2; }
+  .postid-1869 .gv-table-view tr:hover {
+    background-color: #efefef; }
+  .postid-1869 .gv-table-view th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #00bdc1;
+    color: white; }
+
+/*# sourceMappingURL=page.css.map */

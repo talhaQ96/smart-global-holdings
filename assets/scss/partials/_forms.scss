@@ -1,0 +1,198 @@
+// Search Form in Header
+
+#header{
+	.large-dvc-search{
+		position: absolute;
+		right: 25px;
+
+		@include media-q(desktop){
+			top: 10px;
+			right: auto;
+			left: calc(50% - 124px)
+		}
+	}
+
+	form{
+		background-color: #f0f1f1;
+		border-radius: 10px;
+		border-width: 0;
+		min-width: 248px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 10px 5px 15px;
+	
+		> div{
+			border: 0;
+			padding: 0;
+		}
+	
+		input, button{
+			background-color: transparent;
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+	
+		input{
+			font-size: map-get($font-size-map, xs);
+			font-family: $font-main;
+			min-width: 90%;
+			-webkit-appearance: textfield; 
+
+			&:focus{
+				outline: none;
+			}
+		}
+
+		button{
+			height: 13px;
+		}
+
+		.fas{
+			color: #30a5a7;
+		}
+	}
+}
+
+// Search Form 404 Page
+
+.not-found form{
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    background-color: #f9fafa;
+    max-width: 320px;
+    margin: 35px auto 0;
+
+    input{
+		width: 100%;
+    	padding: 10px 22px;
+		border: 0;
+    	background-color: transparent;
+    	font-size: 1rem;
+		font-family: $font-main;
+		font-weight: $font-weight-light;
+
+		&:focus{
+			outline: none;
+		}
+    }
+
+    button{
+    	display: none;
+    }
+}
+
+// Visitor Questionnaire
+
+
+.visitior-questionnaire_wrapper.gform_wrapper.gravity-theme{
+	.gform_fields{
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+		grid-row-gap: 50px;
+
+		@include media-q(s-tablet){
+			grid-row-gap: 40px;
+		}
+	}
+
+	.gfield_label{
+		margin-top: 0;
+		color: $c-green;
+		font-size: 18px;
+		line-height: 26px;
+		font-family: $font-main;
+		font-weight: $font-weight-bold;
+		margin-bottom: 20px;
+		display: block;
+	}
+
+	.gfield_radio label,
+	.gfield_description,
+	.gfield_consent_label{
+		font-size: 20px;
+		line-height: 30px;
+		color: #0c303c;
+	}
+
+	.gfield-choice-input{
+		margin-left: 0;
+		margin-right: 10px;
+	}
+
+	input[type='text'],
+	textarea, select{
+		padding: 12px !important;
+		border: 1px solid #0c303c;
+		outline: none;
+		transition: $transition;
+		font-family: $font-main;
+		font-size: 16px;
+		line-height: 1 !important;
+
+		&:focus, &:hover{
+			border-color: $c-green;
+		}
+	}
+
+	input[type='file']{
+		width: auto !important;
+
+		&:focus, &:hover{
+			border-color: $c-green; 
+		}
+	}
+
+	.gfield_validation_message{
+		padding-top: 12px !important;
+		padding-bottom: 12px !important;
+		padding-right: 12px !important;
+		padding-left: 12px !important;
+		font-size: 16px;
+    	line-height: 22px;
+    	font-weight: 400;
+    	color: #c02b0a
+	}
+}
+
+.visitior-questionnaire .gform_confirmation_message{
+    font-size: 20px;
+    font-weight: 400;
+
+	.default{
+		border: 2px dashed $c-green;
+		padding: 20px;
+
+		h3{
+			color: $c-green;
+		}
+	}
+
+	.access-denied{
+		border: 2px dashed rgb(255, 63, 72);
+		padding: 20px;
+
+		h3{
+			color: rgb(255, 63, 72);
+		}
+	}
+
+	.access-approved{
+		border: 2px dashed rgb(0, 160, 98);
+		padding: 20px;
+
+		h3{
+			color: rgb(0, 160, 98);
+		}
+	}
+
+	.proof-required{
+		border: 2px dashed rgb(187, 0, 131);
+		padding: 20px;
+
+		h3{
+			color: rgb(187, 0, 131);
+		}
+	}
+}

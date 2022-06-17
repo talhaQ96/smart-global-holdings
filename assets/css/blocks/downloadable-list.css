@@ -1,0 +1,59 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+@media (min-width: 992px) {
+  .acf-downloadable-list-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr; } }
+.acf-downloadable-list-block a {
+  font-size: 1.75rem;
+  color: #0c303c;
+  font-weight: 300;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  position: relative; }
+  @media (max-width: 767px) {
+    .acf-downloadable-list-block a {
+      font-size: 1.25rem; } }
+  @media (min-width: 992px) {
+    .acf-downloadable-list-block a {
+      margin-right: 60px; }
+      .acf-downloadable-list-block a:nth-child(odd):before {
+        width: 200%; }
+      .acf-downloadable-list-block a:nth-child(even):before {
+        width: 110%; }
+      .acf-downloadable-list-block a:nth-last-child(2):nth-child(odd):before {
+        display: none; } }
+  .acf-downloadable-list-block a:not(:last-child):before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #00bdc1; }
+  .acf-downloadable-list-block a:after {
+    content: "";
+    background: url("../../images/pdf-icon.png");
+    color: #00bdc1;
+    width: 30px;
+    height: 37px;
+    margin-left: 10px;
+    transition: all 300ms ease-in-out; }
+    .acf-downloadable-list-block a:after:hover {
+      display: none; }
+  .acf-downloadable-list-block a:hover {
+    color: #00bdc1; }
+    .acf-downloadable-list-block a:hover:after {
+      background: url("../../images/pdf-icon-hover.png"); }
+
+/*# sourceMappingURL=downloadable-list.css.map */

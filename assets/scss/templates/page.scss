@@ -1,0 +1,549 @@
+@import "../partials/mixins";
+
+// UL & OL Generic Styling
+.page .site-content , .single .site-content{
+    ul{
+        font-size: map-get($font-size-map, lg);
+        line-height: map-get($line-height-map, md);
+        list-style-type: none;
+
+        li{
+            position: relative;
+    
+            &:before{
+                content: "+";
+                color: $c-green;
+                position: absolute;
+                left: -30px;
+            }
+    
+            a{
+                color:  #00bdc1;
+                
+                &:hover{
+                    border-bottom: 1px solid $c-green;
+                }
+            }
+        }
+    }
+
+    ol{
+        font-size: map-get($font-size-map, lg);
+        line-height: map-get($line-height-map, md);
+
+        li a{
+            color:  #00bdc1;
+                
+            &:hover{
+                border-bottom: 1px solid $c-green;
+            }
+        }
+    }
+
+    figcaption{
+        font-weight: $font-weight-normal;
+    }
+}
+
+.page{
+	// Banners On Page
+
+	.banner-between-content{
+		@include media-q(s-laptop, min){
+			min-height: 650px;
+		}
+
+		@include media-q(phone){
+			min-height: 330px;
+		}
+	}
+
+	// Reusable Block Two Column Layout
+
+	.two-column-layout{
+		.inner-content > .wp-block-column{
+			max-width: 530px;
+		}
+	}
+
+	// Sections with 28px paragraph tag 
+
+	.has-large-content{
+		p{
+			font-size: 1.75rem;
+			line-height: 2.5rem;
+			font-weight: $font-weight-light;
+
+			@include media-q(s-tablet){
+				font-size: 1.25rem;
+				line-height: 2rem;
+			}
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.img-center img{
+		display: block;
+		margin: auto;
+	}
+
+	// Company > About Page CSS
+
+	.section-company-about__operational{
+		padding: 60px 0;
+		margin: 0;
+
+		@include media-q(l-phone){
+			padding: 45px 0;
+		}
+
+		.container{
+			max-width: 1530px;
+
+			> .wp-block-columns{
+
+				@include media-q(tablet){
+					flex-direction: column;
+
+					.wp-block-column{
+						margin: 0;
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.wp-block-columns, figure{
+			margin: 0;
+		}
+
+		.text-box{
+			margin-top: 50px;
+
+			@include media-q(s-laptop, min){
+				margin-right: 135px;
+			}
+		}
+
+		.chart-wrapper{
+			width: 570px;
+			max-width: 100%;
+
+			@include media-q(tablet){
+				margin: auto;
+			}
+
+			@include media-q(s-tablet){
+				width: 525px;
+			}
+
+			@include media-q(l-phone){
+				display: none;
+			}
+		}
+
+		.doughnut-chart{
+			@include media-q(l-phone, min){
+				display: none;
+			}
+		}
+	}
+
+	.section-company-about__acquisition{
+		padding: 60px 0;
+		position: relative;	
+		
+		@include media-q(s-laptop, min){
+			padding: 190px 0 100px;
+		}
+
+		@include media-q(s-laptop){
+			&:after{
+				content: "";
+				position: absolute;
+				top: 0; bottom: 0;
+				right: 0; left: 0;
+				background-color: #09A5A9;
+				opacity: 1;
+			}
+		}
+
+		.text-box{
+    		margin: auto;
+    		
+    		@include media-q(s-laptop, min){
+    			float: right;
+    			max-width: 485px;
+    		}
+
+    		p{
+    			font-weight: $font-weight-light;
+    		}
+
+    		ul{
+    			margin-bottom: 0px;
+
+				li{
+    				font-weight: $font-weight-light; 
+
+    				&:before{
+    					color: #12323d;
+    				}
+
+    				& + li{
+    					margin-top: 15px;
+    				}	
+    			}
+    		}
+		}
+	}
+
+	.section-company-about__map{
+		.container{
+			max-width: 1530px;
+		}
+
+		figure{
+			margin-top: 75px;
+			margin-bottom: 40px;
+		
+			@include media-q(s-laptop){
+				margin-top: 40px;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	// Company > About Page CSS
+
+	.section-company-history__timeline{
+		margin: 0;
+		padding: 60px 0 170px;
+
+		@include media-q(s-laptop){
+			padding-bottom: 100px;
+		}
+
+		@include media-q(s-tablet){
+			padding-bottom: 60px;
+		}
+
+		figure{
+			margin: 60px 0 0;
+		}
+	}
+
+	// Impact > Overview Page CSS
+
+	.section-overview-impact__testimonial{
+		padding: 95px 0;
+		margin: 0;
+
+		@include media-q(s-tablet){
+			padding: 60px 0;
+		}
+	}
+
+	.section-overview-impact__report{
+		padding: 30px 0;
+
+		@include media-q(tablet){
+			text-align: center;
+		}
+
+		@include media-q(s-laptop, min){
+			&:before{
+				display: none;
+			}
+		}
+
+		.inner-container{
+			max-width: 620px;
+			margin: auto;
+		}
+
+		.button{
+			color: #cbcccc;
+			border-color: #cbcccc;
+
+			&:hover{
+				color: $c-green;
+				border-color: $c-green;
+			}
+		}
+	}
+
+	// Impact > Environment Page CSS
+
+	.section-environment-impact__has-bg{
+		align-items: flex-start;
+		padding: 30px 0;
+
+		@include media-q(s-laptop, min){
+			padding: 170px 0 0;
+		}
+
+		@include media-q(s-laptop){
+			align-items: center;
+			text-align: center;
+		}
+
+
+		h2{
+			margin: 0;
+			text-transform: initial;
+			font-size: 50px;
+			line-height: 60px;
+
+			@include media-q(s-tablet){
+				font-size:   38px;
+				line-height: 50px;
+			}
+		
+			@include media-q(phone){
+				font-size: 32px;
+		   		line-height: 42px;
+			}
+
+			@include media-q(s-tablet, min){
+		 		span{ display: block; }
+			}
+		}
+	}
+
+	// Impact > People Page CSS
+
+	.section-people-impact__pie-charts{
+		@include media-q(s-tablet){
+			.wp-block-columns{
+				flex-direction: column;
+
+				.wp-block-column + .wp-block-column{
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	// Impact > Governace Page CSS
+
+	.block-has-icon{
+		p:first-child{
+			margin-top: 0;
+		}
+
+		img{
+			display: block;
+			margin: auto;
+		}
+
+		.wp-block-columns .wp-block-column:nth-child(2){
+			margin: 0;
+			
+			@include media-q(tablet, min){
+				margin-left: 1em;
+			}
+		}
+
+		@include media-q(tablet, min){
+			h2{
+				margin-bottom: 65px;
+			}
+		}
+
+		@include media-q(tablet){
+			h2{
+				text-align: center;
+			}
+			
+			> .container > .wp-block-columns{
+				flex-direction: column;
+			}
+		}
+	}
+
+	// Careers Page CSS
+
+	.section-careers__benefits .inner-content .wp-block-column{
+		max-width: 600px;
+	}
+
+	.section-careers_jobs{
+		margin-bottom: 0;
+		min-height: 455px;
+		display: flex;
+		align-items: center;
+		padding-top: 25px;
+		padding-bottom: 25px;
+
+		@include media-q(s-tablet){
+			min-height: 350px;
+		}
+
+		.acf-button-block{
+			display: flex;
+			justify-content: center;
+		}
+
+		.button{
+			background-color: #0D323E;
+			color: $c-white;
+			border: none;
+
+			span:after{
+				color: #00E2E2;
+			}
+
+			&:hover{
+				background-color: $c-white;
+				color: #0D323E;	
+			}
+		}
+	}
+
+	.section-careers_testiomonial{
+		padding: 70px 0 120px;
+		overflow: hidden;
+
+		@include media-q(l-phone){
+			padding-top: 20px;
+		}
+	}
+
+	// Contact Us Page
+
+	.section-contact__contact-details{
+		padding: 70px 0;
+		margin: 0;
+
+		@include media-q(s-tablet){
+			padding: 60px 0;
+		}
+
+		.wp-block-columns:not(:first-child){
+			margin-top: 80px;
+
+			@include media-q(s-tablet){
+				margin-top: 60px;
+			}
+		}
+
+		.wp-block-columns{
+			margin-bottom: 50px;
+
+			@include media-q(s-tablet){
+				margin-bottom: 30px;
+			}
+		}
+
+		.has-icon{
+			display: flex;
+
+			@include media-q(phone){
+				flex-direction: column;
+				row-gap: 10px;
+			}
+
+			figure{
+				margin: 0;
+				min-width: 70px;
+			}
+		}
+
+		h2{
+			margin-bottom: 0;
+		}
+
+		p{
+			font-weight: normal;
+    		font-size: map-get($font-size-map, md);
+    		line-height: map-get($line-height-map, sm);
+    		color: #737879;
+		}
+
+		ul{
+			font-weight: normal;
+			font-size: map-get($font-size-map, md);
+    		line-height: 28px;
+    		color: #737879;
+    		margin-top: 0;
+    		margin-bottom: 0;
+
+    		li + li{
+    			margin-top: 10px;
+    		}
+		}
+	}
+}
+
+//404 Page CSS
+
+.not-found{
+	text-align: center;
+
+	.wrapper{
+		max-width: 576px;
+		margin: auto;
+	}
+
+	.button{
+		margin-top: 35px;
+	}
+}
+
+.visitior-questionnaire_wrapper.gform_wrapper.gravity-theme .gform_fields {
+	grid-template-columns: 1fr 0 0 0 0 0 1fr 1fr;
+}
+
+.row-gap-0 {
+	row-gap: 0;
+}
+
+.postid-1869 {
+	.gv-widget-search {
+		align-items: center;
+		flex-flow: initial;
+		margin-top: 0;
+		margin-bottom: 0;
+		.gv-widget-search.gv-search-horizontal .gv-search-box {
+			flex: 0 0 17em;
+		}
+		.gv-search-box {
+			min-width: inherit;
+			input[name="gv_search"] {
+				padding: 12px;
+				border: 1px solid #0c303c;
+				outline: none;
+				-webkit-transition: all 300ms ease-in-out;
+				transition: all 300ms ease-in-out;
+				font-size: 16px;
+				line-height: 1;
+				width: 100%;
+			}
+		}
+	}
+	.gv-table-view {
+		border-collapse: collapse;
+		width: 100%;
+		th, td {
+			border: 1px solid #ddd;
+			padding: 5px;
+		}
+		tr:nth-child(even){
+			background-color: #f2f2f2;
+		}
+		tr:hover {
+			background-color: #efefef;
+		}
+		th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #00bdc1;
+			color: white;
+		}
+	}
+}

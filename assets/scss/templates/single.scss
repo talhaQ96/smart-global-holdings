@@ -1,0 +1,48 @@
+@import "../partials/mixins";
+
+.section-blog{
+	> .container{
+		max-width: 1200px;
+	}
+
+	.blog-details{
+		font-weight: $font-weight-medium;
+		margin: 40px 0;
+
+		p{
+			font-size: 1rem;
+			margin: 0;
+		}
+
+		h2{
+			margin: 20px 0;
+		}
+
+		ul.post-categories{
+			@include ul-properties;
+			font-size: 1rem;
+
+			:before{
+				content: "";
+			}
+
+			a{
+				color: #0c303c;
+
+
+				&:hover{
+					color: $c-green;
+				}
+			}
+		}
+	}
+
+	.blog-content{
+		blockquote{
+    		border-left: 8px solid $c-green;
+    		margin-left: 0;
+    		padding-left: 40px;
+
+		}
+	}
+}

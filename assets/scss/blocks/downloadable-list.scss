@@ -1,0 +1,75 @@
+@import "../partials/mixins";
+
+
+.acf-downloadable-list-block{
+
+	@include media-q(tablet, min){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	a{
+		font-size: 1.75rem;
+		color: $c-main;
+		font-weight: $font-weight-light;
+		padding-top: 20px;
+		padding-bottom: 20px;
+    	display: grid;
+    	grid-template-columns: 1fr auto;
+    	align-items: center;
+
+    	position: relative;
+
+		@include media-q(s-tablet){
+			font-size: 1.25rem;
+		}
+
+		@include media-q(tablet, min){
+			margin-right: 60px;
+
+			&:nth-child(odd):before{
+				width: 200%;
+			}
+
+			&:nth-child(even):before{
+				width: 110%;
+			}
+
+			&:nth-last-child(2):nth-child(odd):before{
+				display: none;
+			}
+		}
+
+		&:not(:last-child):before{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background-color: $c-green;
+		}
+
+		&:after{
+			content: "";
+			background: url("../../images/pdf-icon.png");
+    		color: #00bdc1;
+			width: 30px;
+			height: 37px;
+    		margin-left:  10px;
+    		transition: $transition;
+
+    		&:hover{
+				display: none;
+    		}
+		}
+
+		&:hover{
+			color: $c-green;
+
+			&:after{
+				background: url("../../images/pdf-icon-hover.png");
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+/**
+ * Colors
+ */
+/**
+ * Define font related variables here
+ */
+/**
+ * Transition to use
+ */
+.home .site-content .wp-block-columns, .home .site-content .wp-block-image, .home .site-content p {
+  margin-bottom: 0;
+  margin-top: 0; }
+.home .two-column-layout .inner-content > .wp-block-column {
+  max-width: 410px; }
+.home .banner {
+  background-position-y: top;
+  min-height: 550px; }
+  @media (min-width: 1200px) {
+    .home .banner {
+      padding-top: 240px;
+      height: calc(100vh - 113px);
+      display: block; } }
+  @media (max-width: 479px) {
+    .home .banner {
+      min-height: 400px; } }
+  .home .banner .container {
+    position: relative; }
+  .home .banner h1.title {
+    margin: 0; }
+    @media (min-width: 1200px) {
+      .home .banner h1.title {
+        position: absolute;
+        left: 225px;
+        top: 60px; } }
+.home .section-purpose {
+  padding: 30px 0;
+  position: relative; }
+  @media (min-width: 992px) {
+    .home .section-purpose:before {
+      display: none; } }
+  .home .section-purpose .inner-container {
+    max-width: 630px; }
+  @media (min-width: 1200px) {
+    .home .section-purpose {
+      min-height: 610px; } }
+  @media (max-width: 767px) {
+    .home .section-purpose img.wp-block-cover__image-background {
+      object-position: 70% 70% !important; } }
+.home .section-rss h2 {
+  margin-bottom: 30px; }
+
+/*# sourceMappingURL=home.css.map */
